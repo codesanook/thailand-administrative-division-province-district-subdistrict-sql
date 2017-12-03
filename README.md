@@ -20,5 +20,21 @@
 # database diagram 
 ![thai-administrative-division-province-district-subdistrict-sqld-iagram](https://raw.githubusercontent.com/aaronamm/thai-administrative-division-province-district-subdistrict-sql/master/table-relationship-diagram.png)
 
+# ความถูกต้องของข้อมูล
+
+ฐานข้อมูลมีจำนวนข้อมูลดังนี้
+* จำนวนจังหวัด 77 จังหวัด
+* จำนวนอำเภอ 928 อำเภอ
+* จำนวนตำบล 7364 ตำบล
+
+*หากข้อมูลส่วนใดไม่ถูกต้อง ต้องการให้แก้ไข สามารถสร้าง PR หรือติดต่อมาที่ facebook page codesanook.com  ได้เลยครับ*
+
+## [codesanook page](https://www.facebook.com/codesanookpage/)
 
 
+# Credit
+
+* [ข้อมูลพิกัด LAT/LONG ที่ตั้งตำบล](https://data.go.th/DatasetDetail.aspx?id=c6d42e1b-3219-47e1-b6b7-dfe914f27910) 
+จาก Open Government Data [data.go.th]( https://data.go.th) 
+* [อาจารย์เอนก กนกอภิวัฒน์](https://www.facebook.com/anekpage)
+* [Taipan Prasithpongchai](https://www.facebook.com/dewnoibkk)
