@@ -27,6 +27,12 @@
 * จำนวนอำเภอ 928 อำเภอ
 * จำนวนตำบล 7364 ตำบล
 
+### SQL statement to verify number of row 
+```
+select count(id) from provinces;
+select count(id) from districts;
+select count(id) from subdistricts;
+```
 *หากข้อมูลส่วนใดไม่ถูกต้อง ต้องการให้แก้ไข สามารถสร้าง PR หรือติดต่อมาที่ facebook page codesanook.com  ได้เลยครับ*
 
 ## [codesanook page](https://www.facebook.com/codesanookpage/)
