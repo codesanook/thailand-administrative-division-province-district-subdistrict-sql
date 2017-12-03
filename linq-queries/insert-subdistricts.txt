@@ -1,0 +1,38 @@
+var subdistricts =
+TAMBONs
+.Select(s => new
+{
+	Code = Convert.ToInt32(s.TA_ID),
+	NameInThai = s.TAMBON_T,
+	NameInEnglish = s.TAMBON_E,
+	DistrictCode = Convert.ToInt32(s.AM_ID),
+	Latitude = Convert.ToSingle(s.LAT),
+	Longitude = Convert.ToSingle(s.LONG)
+})
+.OrderBy(s => s.DistrictCode)
+.ThenBy(s => s.Code)
+.ToList()
+//in memory query
+.GroupBy(s => s.Code)
+//handle some rows do not have English name
+//take the first row that has English name, if not take the first row
+.Select(s =>
+	s.FirstOrDefault(r => !string.IsNullOrEmpty(r.NameInEnglish)) ?? s.First()
+);
+
+var subdistrictsWithDistrictId =
+from s in subdistricts
+join d in Districts
+on s.DistrictCode equals d.Code
+select new Subdistricts
+{
+	Code = s.Code,
+	NameInThai = s.NameInThai.Replace("ต.", "").Replace("แขวง", "").Trim(),
+	NameInEnglish = s.NameInEnglish?.Trim(),
+	DistrictId = d.Id,
+	Latitude = s.Latitude,
+	Longitude = s.Longitude
+};
+
+Subdistricts.InsertAllOnSubmit(subdistrictsWithDistrictId);
+SubmitChanges();

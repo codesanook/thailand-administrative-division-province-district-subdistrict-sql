@@ -1,0 +1,22 @@
+var provinces =
+TAMBONs
+.Select(p => new
+{
+	p.CH_ID,
+	p.CHANGWAT_T,
+	p.CHANGWAT_E
+})
+.OrderBy(p => p.CH_ID)
+.ToList()
+//in memory query
+.GroupBy(p => p.CH_ID)
+.Select(p => p.First())
+.Select(p => new Provinces
+{
+	Code = Convert.ToInt32(p.CH_ID),
+	NameInThai = p.CHANGWAT_T.Replace("จ.", "").Trim(),
+	NameInEnglish = p.CHANGWAT_E.Trim()
+});
+
+Provinces.InsertAllOnSubmit(provinces);
+SubmitChanges();

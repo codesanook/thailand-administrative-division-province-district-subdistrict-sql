@@ -1,0 +1,33 @@
+var districts =
+TAMBONs
+.Select(d => new
+{
+	Code = Convert.ToInt32(d.AM_ID),
+	NameInThai = d.AMPHOE_T,
+	NameInEnglish = d.AMPHOE_E,
+	ProvinceCode = Convert.ToInt32(d.CH_ID)
+})
+.OrderBy(d => d.ProvinceCode)
+.ThenBy(d => d.Code)
+.ToList()
+//in memory query
+.GroupBy(d => d.Code)
+.Select(d => d.First());
+
+//join to set foreign key
+var districtsWithProvinceId = (
+from d in districts
+join p in Provinces
+on d.ProvinceCode equals p.Code
+
+select new Districts()
+{
+	Code = d.Code,
+	NameInThai = d.NameInThai.Replace("อ.", "").Trim(),
+	NameInEnglish = d.NameInEnglish.Trim(),
+	ProvinceId = p.Id
+});
+
+
+Districts.InsertAllOnSubmit(districtsWithProvinceId);
+SubmitChanges();
