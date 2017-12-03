@@ -6,8 +6,8 @@ TAMBONs
 	NameInThai = s.TAMBON_T,
 	NameInEnglish = s.TAMBON_E,
 	DistrictCode = Convert.ToInt32(s.AM_ID),
-	Latitude = Convert.ToSingle(s.LAT),
-	Longitude = Convert.ToSingle(s.LONG)
+	Latitude = Convert.ToDecimal(s.LAT),
+	Longitude = Convert.ToDecimal(s.LONG)
 })
 .OrderBy(s => s.DistrictCode)
 .ThenBy(s => s.Code)
