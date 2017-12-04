@@ -67,15 +67,15 @@ SELECT COUNT(Id) FROM Subdistricts WHERE ZipCode IS NOT NULL;
 # useful information
 
 # TO DO
-[x] SQL script for SQL server
-[x] SQL script for MySQL 
-[x] zip code
-[ ] CodeSanook Module
-[ ] allow to edit correctness/approve 
-[ ] Export to multiple types of RDMS with NHibernate e.g. 
-[ ] SQL Server 
-[ ] MySQL
-[ ] Oracle
-[ ] SQLite
-[ ] SQL Server Compact
-[ ] PostgreSQL      
+- [x] SQL script for SQL server
+- [x] SQL script for MySQL 
+- [x] zip code
+- [ ] CodeSanook Module
+- [ ] allow to edit correctness/approve 
+- [ ] Export to multiple types of RDMS with NHibernate e.g. 
+- [ ] SQL Server 
+- [ ] MySQL
+- [ ] Oracle
+- [ ] SQLite
+- [ ] SQL Server Compact
+- [ ] PostgreSQL  
