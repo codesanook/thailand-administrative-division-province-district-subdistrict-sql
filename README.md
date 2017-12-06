@@ -64,7 +64,20 @@ SELECT COUNT(Id) FROM Subdistricts WHERE ZipCode IS NOT NULL;
 * [อาจารย์เอนก กนกอภิวัฒน์](https://www.facebook.com/anekpage)
 * [Taipan Prasithpongchai](https://www.facebook.com/dewnoibkk)
 
+
 # useful information
+
+## index and key naming convention
+* If Index is **Primary** Clustered Index, use **PK_TableName**
+* If Index is **Non-clustered** Index, use **IX_TableName_ColumnName1_ColumnName2…**
+* If Index is **Unique** Non-clustered Index, use **UX_TableName_ColumnName1_ColumnName2…** (unique key should be index) 
+* If **Foreign key** : **FK_TableName_ColumnName1_ColumnName2…** (Use IX.. if you want to create index for this foreign key) 
+
+* credit https://blog.sqlauthority.com/2012/05/21/sql-server-renaming-index-index-naming-conventions/
+
+
+
+
 
 # TO DO
 - [x] SQL script for SQL server
