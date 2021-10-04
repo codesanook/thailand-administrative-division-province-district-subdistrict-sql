@@ -60,7 +60,7 @@ SELECT COUNT(Id) FROM Subdistricts WHERE ZipCode IS NOT NULL;
 * [ข้อมูลพิกัด LAT/LONG ที่ตั้งตำบล](https://data.go.th/DatasetDetail.aspx?id=c6d42e1b-3219-47e1-b6b7-dfe914f27910)
 จาก Open Government Data [data.go.th]( https://data.go.th)
 
-* ข้อมูลรหัสไปรษณีย์จาก [http://thai-db-download.blogspot.com/] (http://thai-db-download.blogspot.com/2015/02/sql-77-full-version.html)
+* ข้อมูลรหัสไปรษณีย์จาก [http://thai-db-download.blogspot.com/](http://thai-db-download.blogspot.com/2015/02/sql-77-full-version.html)
 * [อาจารย์เอนก กนกอภิวัฒน์](https://www.facebook.com/anekpage)
 * [Taipan Prasithpongchai](https://www.facebook.com/dewnoibkk)
 
